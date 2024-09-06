@@ -29,6 +29,7 @@ public class MyWorld extends World
     
     public void act() {
         label.setValue(Double.toString(ball.getSpeed()));
-        canvas.drawImage(ballImage, ball.getX() - ballImage.getWidth() / 2, ball.getY() - ballImage.getHeight() / 2);
+        canvas.setColor(new Color((int) Math.round(Math.random() * 255.0), (int) Math.round(Math.random() * 255.0), (int) Math.round(Math.random() * 255.0), 255));
+        canvas.fillOval(ball.getX() - ballImage.getWidth() / 2, ball.getY() - ballImage.getHeight() / 2, ballImage.getWidth() - 1, ballImage.getHeight() - 1);
     }
 }
